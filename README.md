@@ -1,6 +1,6 @@
-# NodeJS in AWS Training
+## NodeJS in AWS Training
 
-# Mentoring program which aims at improving corresponding skills related to Node.js ecosystem and connected environment, giving a strong base of skill set required to have for a production-ready Node.js engineer with AWS skillset. 
+### Mentoring program which aims at improving corresponding skills related to Node.js ecosystem and connected environment, giving a strong base of skill set required to have for a production-ready Node.js engineer with AWS skillset. 
 
 As a main result of this metoring program you should build application (ECommerce Application - Shop)
 
@@ -10,9 +10,10 @@ Customers find a product by visiting the website of the retailer directly (YOUR 
 
 Customer can create order and wait for delivery.
 
-[APPLICATION TEMPLATE](https://github.com/rolling-scopes-school/nodejs-aws-fe)
+[APPLICATION TEMPLATE](https://github.com/rolling-scopes-school/nodejs-aws-fe) (MUST BE USED IN ORDER TO SAVE YOUR TIME AND FOCUS ON BACKEND STAFF)
 
 
-# MUST HAVE FUNCTIONALITY (will be updated after each lecture): 
+#### MUST HAVE APPLICATION FUNCTIONALITY (will be updated after each lecture): 
  
 1. Products representation on Home page. (after LECTURE1)
+2. Coming soooon.....
