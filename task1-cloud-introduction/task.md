@@ -1,22 +1,18 @@
 Task1 (After Lecture1 "AWS Introduction, Registration, IAM")
 
-Deadline         | Folder Name    | Coefficient
------------------|----------------|---------------
-16.10.2020 23:59 | ...            | .....
-
  1. Install Discord, register and [go to](PASS LINK TO THE CHAT)
  2. Register in RSA
     details about registration here (feel free ask questions in chat)
  3. Revice: 
-       a) What is REST, what is the main principles 
-       b) How to create basic API based service using ExpressJS
+       a) What is REST, what is the main principles.  
+       b) How to create basic API based service using ExpressJS. 
  2. Read about (if you would like learn more than during lecture):
-       a) On-Premice architecture 
-       b) Cloud Architecture
-       c) Cloud benefits
-       d) What is region, availability zone, IAM
-       e) How to use cloud (Read about possible showcases)
-       f) What is serverless architecture
+       a) On-Premice architecture.      
+       b) Cloud Architecture. 
+       c) Cloud benefits  
+       d) What is region, availability zone, IAM. 
+       e) How to use cloud (Read about possible showcases). 
+       f) What is serverless architecture. 
  3. Pass [test](https://forms.gle/ftxc2Qv2rr6qj4So8) You may pass only once.
  4. Fork [Front app](https://github.com/rolling-scopes-school/nodejs-aws-fe).
     Clone, install dependencies and run app and check if everything is okay.
