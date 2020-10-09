@@ -3,7 +3,7 @@ Task1 (After Lecture1 "AWS Introduction, Registration, IAM")
  1. Install Discord, register and [go to](PASS LINK TO THE CHAT)
  2. Register in RSA
     details about registration here (feel free ask questions in chat)
- 3. Revice: 
+ 3. Revise: 
        a) What is REST, what is the main principles.  
        b) How to create basic API based service using ExpressJS. 
  2. Read about (if you would like learn more than during lecture):
