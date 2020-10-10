@@ -1,6 +1,6 @@
 **Task 1 (After Lecture1 "AWS Introduction, Registration, IAM")**  
   
- 1. Install Discord, register and [go to](PASS LINK TO THE CHAT)  
+ 1. Install Discord, register and [go to](https://discord.gg/ccZrfa)  
  2. Register in RSA  
     details about registration here (feel free ask questions in chat)  
  3. Revise:  
