@@ -18,7 +18,7 @@ Task1 (After Lecture1 "AWS Introduction, Registration, IAM")
     Clone, install dependencies and run app and check if everything is okay.
  5. Read short description of application 
     (during the course it will be updated with new details)
- 6. Decide which type of product will be in your shop)  Mixed, Games, Toys, Electronic devices... Whatevet
+ 6. Decide which type of product will be in your shop)  Mixed, Games, Toys, Electronic devices... Whatever
  7. Register in AWS accoring to  lecture1 (minute of recording will be provided after)
  8. Create IAM 'configuration' to be able to get your Cost Explorer data using CLI
  9. Using CLI connect to your AWS account and get Cost Explorer data about current budget usage.
