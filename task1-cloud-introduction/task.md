@@ -2,7 +2,7 @@
   
  1. Install Discord, register and [go to chat](https://discord.gg/ccZrfa)  
  2. Register in RSA  
-    [details about registration here (feel free ask questions in chat)](https://discord.com/channels/755676888680366081/763289994265362444/763290809105121280)
+    [details about registration is here (feel free ask questions in chat)](https://discord.com/channels/755676888680366081/763289994265362444/763290809105121280)
  3. Revise:  
        a) What is REST; what are the main principles of it.  
        b) How to create a basic REST API service using Express.  
