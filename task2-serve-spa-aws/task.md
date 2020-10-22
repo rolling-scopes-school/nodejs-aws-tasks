@@ -1,6 +1,6 @@
 ## Task 2 (Serve SPA in AWS)
 
-##YOU HAVE TO WORK IN YOUR OWN REPOSITORY, NOT IN COMMON
+## YOU HAVE TO WORK IN YOUR OWN REPOSITORY, NOT IN COMMON
 
 #### PREREQUISITES
 _NOTE: This should have already been done in Task 1, but as a reminder._
@@ -36,4 +36,4 @@ _(Link to CloudFront website is provided. S3-website shows 403 Access Denied err
 - **5** - Serverless-finch and serverless-single-page-app plugins are added and configured. The app can be built and deployed by running npm script command. 
 _(Link to CloudFront website is provided. PR with all changes is submitted in the YOUR OWN frontend repository and its link is provided for review.)_
 
-##YOU HAVE TO WORK IN YOUR OWN REPOSITORY, NOT IN COMMON (NOT IN THIS ONE - )
+## YOU HAVE TO WORK IN YOUR OWN REPOSITORY, NOT IN COMMON (NOT IN THIS ONE - )
