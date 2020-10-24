@@ -21,6 +21,6 @@
     (Stay tuned, it will be updated during the course)  
  6. Decide which commodities will be sold in your shop - Mixed, Games, Toys, Electronic devices... you name it  
  7. Register in AWS. You can find the instructions in [the first lecture webinar](https://youtu.be/kY0P_QxVzKw?t=3769)  
- 8. Create the IAM 'configuration' to be able to work with the Cost Explorer data using CLI  
- 9. Using CLI, connect to your AWS account and get the current budget usage data.  
+ 8. Create an IAM user and assign AdministratorAccess policy to it.
+ 9. Using CLI, connect to your AWS account and get the created IAM user information (example: `aws iam get-user --user-name=MyUser`).  
  10. Wait for the next lecture and help others in the chat if they have some issues  
