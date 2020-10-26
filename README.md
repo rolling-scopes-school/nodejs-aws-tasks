@@ -15,5 +15,6 @@ Customer can create order and wait for delivery.
 
 #### MUST HAVE APPLICATION FUNCTIONALITY (will be updated after each lecture): 
  
-1. Products representation on Home page. (after LECTURE1)
-2. Coming soooon.....
+1. Products representation on Home page should be based on product-service API.
+2. Products are still static, but products are hardcoded on BE product-service.
+3. Product images are not randomly generated on client side. Product image, same as another product model information should be stored on BE side(now mocks).
