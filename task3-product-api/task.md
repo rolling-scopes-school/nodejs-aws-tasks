@@ -46,9 +46,10 @@ Reviewers should verify the lambda functions by invoking them through provided U
 - **+1** - SWAGGER documentation is created for product-service
 - **+1** - Lambda handlers are covered by basic UNIT tests (NO infrastructure logic is needed to be covered) (You may use JEST)
 - **+1** - Lambda handlers (getProductsList, getProductsById) code is written not in 1 single module (file) and separated in codebase.
+- **+1** - Main error scenarious are handled by API ("Product not found" error, try catch blocks are used in lambda handlers).
  
 
-**MAX TASK SCORE = 10**
+**MAX TASK SCORE = 11**
 
 **TASK 3 description teamplate for PR creation:**
 
@@ -59,4 +60,6 @@ Reviewers should verify the lambda functions by invoking them through provided U
    Additional scope - webpack, swagger, unit tests
 2. Link to product-service API - .....
 3. LInk to FE MR (YOUR OWN REPOSITORY) - ...
+
+4. In case SWAGGER file is not provided - please provide product schema in PR description
 
