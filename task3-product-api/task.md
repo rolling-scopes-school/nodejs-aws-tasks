@@ -1,23 +1,23 @@
 
-** Task 3 (After Lecture3 "First API with AWS API GatewayAWS Lambda")**  
+**Task 3 (After Lecture3 "First API with AWS API GatewayAWS Lambda")**  
 
 Task goal - Create first API based microservice to get mocked products (1 product by productId, getall products).
 This product microservice is needed to be created in NEW GITHUB PUBLIC REPOSITORY AS DESCRIBED AND SHOWED on lecture_3.
 This product microservice is needed to be created using Serverless Framework, AWS API Gateway, AWS Lambda
 
 
-** To Complete task 3 you need to do changes in your OWN 2 repositories - BE (backend) and FE (frontend) repository
+**To Complete task 3 you need to do changes in your OWN 2 repositories - BE (backend) and FE (frontend) repository
 
 
-** TASK PREREQUISITES:
+**TASK PREREQUISITES:
 Install the latest version of Serverless Framework (https://www.serverless.com/).
 Configure credentials for AWS to make them accessible by Serverless.
 Create your own public github repository for all future backend work (you might call it how you would like). You will have 2 repos - 1 for frontend, 1 for backend till the end of course.
 
 
-** You should create branch from master and work in branch (f.e. branch name - task-3) in BE (backend) and in FE (frontend) repository
+**You should create branch from master and work in branch (f.e. branch name - task-3) in BE (backend) and in FE (frontend) repository
 
-** MAIN TASK
+**MAIN TASK
 Add dynamic product representation on Frontend side.
 
 1. Create a lambda function under the same serverless.yml file of product-service. Function is called getProductsList which will be triggered by the HTTP GET method.
@@ -31,7 +31,7 @@ The response from the lambda should be 1 searched product from an array of produ
 This endpoint is not needed to be integrated with Frontend right now.
 
 
-** EVALUATION CRITERIA:
+**EVALUATION CRITERIA:
 Reviewers should verify the lambda functions by invoking them through provided URLs.
 
 - **1** - poiproduct-service serverless.yml contains configuration for 2 lambda functions, API is not working at all, but YAML configuration is correct
@@ -48,9 +48,9 @@ Additional (optional) tasks (but nice to have):
 - **+1** - Lambda handlers (getProductsList, getProductsById) code is written not in 1 single module (file) and separated in codebase.
  
 
-MAX TASK SCORE = 10
+**MAX TASK SCORE = 10
 
-TASK 3 description teamplate for PR creation:
+**TASK 3 description teamplate for PR creation:
 
 1. What was done? 
    Example:
