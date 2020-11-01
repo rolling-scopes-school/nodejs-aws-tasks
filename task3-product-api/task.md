@@ -20,12 +20,12 @@ Create your own public github repository for all future backend work (you might 
 **MAIN TASK**
 **Add dynamic product representation on Frontend side.**
 
-1. Create a lambda function under the same serverless.yml file of product-service. Function is called getProductsList which will be triggered by the HTTP GET method.
+1. Create a lambda function under the same serverless config file (it can be yml, ts, etc) of product-service. Function is called getProductsList which will be triggered by the HTTP GET method.
 The requested URL should be /products
 The response from the lambda should be FULL array of products (mock data should be used - this mock data should be stored in Product Service).
 This endpoint should be integrated with Frontend app for product list page representation.
 
-2. Create a lambda function under the same serverless.yml file of product-service. Function is called getProductsById which will be triggered by the HTTP GET method.
+2. Create a lambda function under the same serverless config file of product-service. Function is called getProductsById which will be triggered by the HTTP GET method.
 The requested URL should be /products/{productId}   (What is product ID in your application is up to you - productName, UUID, etc.)
 The response from the lambda should be 1 searched product from an array of products (mock data should be used - this mock data should be stored in Product Service).
 This endpoint is not needed to be integrated with Frontend right now.
@@ -34,7 +34,7 @@ This endpoint is not needed to be integrated with Frontend right now.
 **EVALUATION CRITERIA:**
 Reviewers should verify the lambda functions by invoking them through provided URLs.
 
-- **1** - poiproduct-service serverless.yml contains configuration for 2 lambda functions, API is not working at all, but YAML configuration is correct
+- **1** - poiproduct-service serverless config contains configuration for 2 lambda functions, API is not working at all, but YAML configuration is correct
 - **2** - The getProductsList OR getProductsById lambda function returns a correct response (POINT1)
 - **3** - The getProductsById AND getProductsList lambda functions return a correct response code (POINT2)
 - **4** - Your own Frontend application is integrated with product service (/products API) and products from product-service are represented on Frontend.  AND POINT1 and POINT2 are done.
