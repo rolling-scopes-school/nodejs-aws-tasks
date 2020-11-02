@@ -8,7 +8,7 @@ Infrastructure As Code (IaC), deployment sample to deploy RDS")**
 
 Use serverless framework to create a database instance in RDS with PostgreSQL and default configuration. 
 RDS instance configuration (Please have a look at Lecture Practical part)
-Connect to database instance via the tool pgAdmin (https://www.pgadmin.org/download) or similar tools like DataGrip/DBeaver and create tables:
+Connect to database instance via the tool DBeaver (https://dbeaver.io/download/) or similar tools like DataGrip/PgAdmin and create tables:
 
 Product model:
 ```
