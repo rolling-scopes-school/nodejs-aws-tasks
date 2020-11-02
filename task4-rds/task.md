@@ -36,21 +36,25 @@ Recommended to use “pg” module to connect the database from the code  https:
 *BE:*
 
     Stock example: {
-      product_id: 'uuid',
+      product_id: '19ba3d6a-f8ed-491b-a192-0a33b71b38c4',
       count: 2
     }
+    
     Product example: {
-      price: 123
+      id: '19ba3d6a-f8ed-491b-a192-0a33b71b38c4'
+      title: 'Product Title',
+      description: 'This product ...',
+      price: 200
     }
     
 *FE* 
 
       Product model: {
-        product_id: 'uuid',
+        id: '19ba3d6a-f8ed-491b-a192-0a33b71b38c4',
         count: 2
-        price: 123,
-        title: ‘Product’,
-        description: ‘’
+        price: 200,
+        title: ‘Product Title’,
+        description: ‘This product ...’
       }
 
 What does it mean for end user - user cannot buy more than product.count (no more items in stock) - But this is future functionality on FE side.
