@@ -6,7 +6,7 @@ Infrastructure As Code (IaC), deployment sample to deploy RDS")**
 
 **TASK 4.1**
 
-Use serverless framework to create a database instance in RDS with PostgreSQL and default configuration. 
+Use AWS Console to create a database instance in RDS with PostgreSQL and default configuration. 
 RDS instance configuration (Please have a look at Lecture Practical part)
 Connect to database instance via the tool DBeaver (https://dbeaver.io/download/) or similar tools like DataGrip/PgAdmin and create tables:
 
@@ -82,7 +82,7 @@ Provide your reviewers with the link to the repo and URL (API Gateway URL) to ex
 
 Reviewers should verify the lambda functions by invoking them through provided URLs.
  
-- **1** - Task 4.1 is implemented, sql script for product load (products+stocks creation in DB) is committed into GIT 
+- **1** - Task 4.1 is implemented
 - **3** - TASK 4.2 is implemented lambda links are provided and returns data
 - **4** - TASK 4.3 is implemented lambda links are provided and products is stored in DB (call TASK 4.2 to see the product)
 - **5** - Your own Frontend application is integrated with product service (/products API) and products from product-service are represented on Frontend. Link to a working Front-End application is provided for cross-check reviewer.
@@ -90,6 +90,7 @@ Reviewers should verify the lambda functions by invoking them through provided U
 
 **Additional (optional) tasks (but nice to have):**
 
+- **+1** - Sql script for product load (products+stocks creation in DB) is committed into GIT 
 - **+1** - POST/products lambda functions returns error 400 status code if product data is invalid
 - **+1** - All lambdas return error 500 status code on any error (DB connection, any unhandled error in code)
 - **+1** - All lambdas do console.log for each incoming requests and their arguments
