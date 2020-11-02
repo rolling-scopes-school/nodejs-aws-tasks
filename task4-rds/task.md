@@ -12,13 +12,13 @@ RDS instance configuration:
 Connect to database instance via the tool pgAdmin (https://www.pgadmin.org/download) or similar tools like DataGrip/DBeaver and create tables:
 
     products:
-    id -  text (primary key)
+    id -  uuid (primary key)
     title - text, not null
     description - text
     price - integer
 
     stocks:
-    product_id - text (foreign key from products.id)
+    product_id - uuid (foreign key from products.id)
     count - integer (There are no more products than this count in stock)
 
 Write SQL script to fill tables with test examples. Store it in your GIT repository. Execute it for your DB to fill data. 
