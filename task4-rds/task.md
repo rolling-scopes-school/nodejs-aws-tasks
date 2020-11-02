@@ -36,7 +36,7 @@ Recommended to use “pg” module to connect the database from the code  https:
 *BE:*
 
     Stock example: {
-      product_id: 1,
+      product_id: 'uuid',
       count: 2
     }
     Product example: {
