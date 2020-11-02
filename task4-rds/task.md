@@ -18,7 +18,7 @@ Connect to database instance via the tool pgAdmin (https://www.pgadmin.org/downl
     price - integer
 
     stocks:
-    product_id - integer (foreign key from products.id)
+    product_id - text (foreign key from products.id)
     count - integer (There are no more products than this count in stock)
 
 Write SQL script to fill tables with test examples. Store it in your GIT repository. Execute it for your DB to fill data. 
@@ -27,7 +27,9 @@ Write SQL script to fill tables with test examples. Store it in your GIT reposit
 **TASK 4.2**
 
 Extend your serverless.yml file with credentials to your database instance and pass it to lambda’s environment variables section.
-Integrate GET/products lambda to return a list of products from the database (joined stocks and products tables)  Product instance on FE side should be joined model of product and stock by productId
+Integrate GET/products lambda to return a list of products from the database (joined stocks and products tables)  Product instance on FE side should be joined model of product and stock by productId. 
+
+Recommended to use “pg” module to connect the database from the code  https://www.npmjs.com/package/pg.
  
 **Example:**
 
@@ -38,13 +40,13 @@ Integrate GET/products lambda to return a list of products from the database (jo
       count: 2
     }
     Product example: {
-      price
+      price: 123
     }
     
 *FE* 
 
       Product model: {
-        product_id: 1,
+        product_id: 'uuid',
         count: 2
         price: 123,
         title: ‘Product’,
@@ -58,17 +60,15 @@ Integrate GET/products/{productId} lambda to return a product from the database
 
 Implement POST/products lambda and implement its logic so it will be creating a new item in a products table.
 
-You should create a branch from the master and work in the branch (f.e. branch name - task-4) in BE (backend) and in FE (frontend) repository
+You should create a branch from the master and work in the branch (f.e. branch name - task-4) in BE (backend) and if needed in FE (frontend) repository
 
 Provide your reviewers with the link to the repo and URL (API Gateway URL) to execute the implemented lambda functions.
-
-Recommended to use “pg” module to connect the database from the code  https://www.npmjs.com/package/pg.
 
 **EVALUATION CRITERIA:**
 
 Reviewers should verify the lambda functions by invoking them through provided URLs.
  
-- **1** - Task 4.1 is implemented, sql script for product load (product creation in DB) is committed into GIT 
+- **1** - Task 4.1 is implemented, sql script for product load (products+stocks creation in DB) is committed into GIT 
 - **3** - TASK 4.2 is implemented lambda links are provided and returns data
 - **4** - TASK 4.3 is implemented lambda links are provided and products is stored in DB (call TASK 4.2 to see the product)
 - **5** - Your own Frontend application is integrated with product service (/products API) and products from product-service are represented on Frontend. Link to a working Front-End application is provided for cross-check reviewer.
@@ -77,9 +77,7 @@ Reviewers should verify the lambda functions by invoking them through provided U
 **Additional (optional) tasks (but nice to have):**
 
 - **+1** - POST/products lambda functions returns error 400 status code if product data is invalid
-- **+2** - All lambdas return error 500 status code on any error (DB connection, any unhandled error in code)
+- **+1** - All lambdas return error 500 status code on any error (DB connection, any unhandled error in code)
 - **+1** - All lambdas do console.log for each incoming requests and their arguments
 - **+1** - Transaction based creation of product (in case stock creation is failed then related to this stock product is not created and not ready to be used by the end user and vice versa) (https://devcenter.kinvey.com/nodejs/tutorials/bl-transactional-support)
-- **+1** - Implement feature on your frontend to disable add product button when count of product in busket is more (or equal) than stock product count.
-           (F.E. you cannot buy more than 5 same products in case in stock count is 5)
 
