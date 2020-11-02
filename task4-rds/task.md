@@ -11,16 +11,20 @@ RDS instance configuration:
 ...
 Connect to database instance via the tool pgAdmin (https://www.pgadmin.org/download) or similar tools like DataGrip/DBeaver and create tables:
 
+Product model:
+```
     products:
     id -  uuid (primary key)
     title - text, not null
     description - text
     price - integer
-
+```
+Stock model:
+```
     stocks:
     product_id - uuid (foreign key from products.id)
     count - integer (There are no more products than this count in stock)
-
+```
 Write SQL script to fill tables with test examples. Store it in your GIT repository. Execute it for your DB to fill data. 
 
 
@@ -35,12 +39,17 @@ Recommended to use “pg” module to connect the database from the code  https:
 
 *BE: separate models in RDS*
 
-    Stock example: {
+    Stock model example in DB: 
+    
+    {
       product_id: '19ba3d6a-f8ed-491b-a192-0a33b71b38c4',
       count: 2
     }
     
-    Product example: {
+    
+    Product model example in DB: 
+    
+    {
       id: '19ba3d6a-f8ed-491b-a192-0a33b71b38c4'
       title: 'Product Title',
       description: 'This product ...',
@@ -49,7 +58,9 @@ Recommended to use “pg” module to connect the database from the code  https:
     
 *FE: One product model as a result of BE models join(product and it's stock) * 
 
-      Product model: {
+      Product model example on Frontend side: 
+
+      {
         id: '19ba3d6a-f8ed-491b-a192-0a33b71b38c4',
         count: 2
         price: 200,
