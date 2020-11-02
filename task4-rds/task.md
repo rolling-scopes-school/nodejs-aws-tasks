@@ -1,4 +1,8 @@
-Example task ropository url: https://github.com/angry-coconut/rds-example-task-lesson4
+Lecture example ropository url: https://github.com/angry-coconut/rds-example-task-lesson4
+
+**Task 3 (After Lecture4 "Cloud Databases Overview
+Overview of DB solutions (SQL, No-SQL (Dynamodb, Mongo, Redis, Elastic Search), NewSQL)
+Infrastructure As Code (IaC), deployment sample to deploy RDS")**
 
 **TASK 4.1**
 
@@ -15,7 +19,7 @@ Connect to database instance via the tool pgAdmin (https://www.pgadmin.org/downl
 
     stocks:
     product_id - integer (foreign key from products.id)
-    count - integer
+    count - integer (There are no more products than this count in stock)
 
 Write SQL script to fill tables with test examples. Store it in your GIT repository. Execute it for your DB to fill data. 
 
@@ -64,9 +68,9 @@ Recommended to use “pg” module to connect the database from the code  https:
 
 Reviewers should verify the lambda functions by invoking them through provided URLs.
  
-- **1** - Task 4.1 is implemented, sql script is committed into GIT  (product load into DB)
-- **3** - TASK 4.2 is implemented lambda links are provided and return data
-- **4** - TASK 4.3 is implemented lambda links are provided and product is stored in DB (call TASK 4.2 to see the product)
+- **1** - Task 4.1 is implemented, sql script for product load (product creation in DB) is committed into GIT 
+- **3** - TASK 4.2 is implemented lambda links are provided and returns data
+- **4** - TASK 4.3 is implemented lambda links are provided and products is stored in DB (call TASK 4.2 to see the product)
 - **5** - Your own Frontend application is integrated with product service (/products API) and products from product-service are represented on Frontend. Link to a working Front-End application is provided for cross-check reviewer.
 
 
@@ -75,5 +79,7 @@ Reviewers should verify the lambda functions by invoking them through provided U
 - **+1** - POST/products lambda functions returns error 400 status code if product data is invalid
 - **+2** - All lambdas return error 500 status code on any error (DB connection, any unhandled error in code)
 - **+1** - All lambdas do console.log for each incoming requests and their arguments
-- **+1** - Transaction based creation of product  (if stock creation is failed, product is not created and not ready to be used) (TODO: Add more links to it)
+- **+1** - Transaction based creation of product (in case stock creation is failed then related to this stock product is not created and not ready to be used by the end user and vice versa) (https://devcenter.kinvey.com/nodejs/tutorials/bl-transactional-support)
+- **+1** - Implement feature on your frontend to disable add product button when count of product in busket is more (or equal) than stock product count.
+           (F.E. you cannot buy more than 5 same products in case in stock count is 5)
 
