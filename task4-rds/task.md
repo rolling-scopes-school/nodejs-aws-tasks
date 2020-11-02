@@ -1,6 +1,6 @@
 Lecture example ropository url: https://github.com/angry-coconut/rds-example-task-lesson4
 
-**Task 3 (After Lecture4 "Cloud Databases Overview
+**Task 4 (After Lecture4 "Cloud Databases Overview
 Overview of DB solutions (SQL, No-SQL (Dynamodb, Mongo, Redis, Elastic Search), NewSQL)
 Infrastructure As Code (IaC), deployment sample to deploy RDS")**
 
@@ -33,7 +33,7 @@ Recommended to use “pg” module to connect the database from the code  https:
  
 **Example:**
 
-*BE:*
+*BE: separate models in RDS*
 
     Stock example: {
       product_id: '19ba3d6a-f8ed-491b-a192-0a33b71b38c4',
@@ -47,7 +47,7 @@ Recommended to use “pg” module to connect the database from the code  https:
       price: 200
     }
     
-*FE* 
+*FE: One product model as a result of BE models join(product and it's stock) * 
 
       Product model: {
         id: '19ba3d6a-f8ed-491b-a192-0a33b71b38c4',
