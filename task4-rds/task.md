@@ -30,7 +30,9 @@ Write SQL script to fill tables with test examples. Store it in your GIT reposit
 **TASK 4.2**
 
 Extend your serverless.yml file with credentials to your database instance and pass it to lambda’s environment variables section.
-Integrate GET/products lambda to return a list of products from the database (joined stocks and products tables)  Product instance on FE side should be joined model of product and stock by productId. 
+Integrate GET/products lambda to return a list of products from the database (joined stocks and products tables)  Product instance on FE side should be joined model of product and stock by productId.
+
+Do not commit your environment variables in serverless.yml to github!
 
 Recommended to use “pg” module to connect the database from the code  https://www.npmjs.com/package/pg.
  
