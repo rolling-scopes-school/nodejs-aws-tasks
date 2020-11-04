@@ -92,7 +92,6 @@ Reviewers should verify the lambda functions by invoking them through provided U
 
 **Additional (optional) tasks (but nice to have):**
 
-- **+1** - Sql script for product load (products+stocks creation in DB) is committed into GIT 
 - **+1** - POST/products lambda functions returns error 400 status code if product data is invalid
 - **+1** - All lambdas return error 500 status code on any error (DB connection, any unhandled error in code)
 - **+1** - All lambdas do console.log for each incoming requests and their arguments
