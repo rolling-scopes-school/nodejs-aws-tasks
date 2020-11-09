@@ -15,13 +15,17 @@
 ## TASK 5.1
 ---
 
-Create a new service, called **import-service**, with a its own **serverless.yml** file.
+Create a new service, called **import-service**, with a its own **serverless.yml** file at the same level as product service.
+
+The backend project structure should look like:
+- src/product-service
+- src/import-service
 
 Create a lambda function in that **serverless.yml** file, called **importProductsFile**, which will be triggered by the HTTP **GET** method.
 
 The requested URL should be **/import**.
 
-The file name will be passed in a **query string** as a **name** parameter and should be described in the **serverless.yml** file as a **request parameter**.
+The name of CSV file with products will be passed in a **query string** as a **name** parameter and should be described in the **serverless.yml** file as a **request parameter**.
 
 Update **serverless.yml** with policies to allow lambda functions to interact with **S3**.
 
@@ -48,7 +52,7 @@ The response should be a correct HTTP response code.
 Reviewers should verify the lambda functions by invoking them through provided URLs.
  
 - **1** - File **serverless.yml** contains configuration for **importProductsFile** function
-- **3** - The **importProductsFile** lambda function returns a correct response which can be used to upload a catalog into the **S3** bucket
+- **3** - The **importProductsFile** lambda function returns a correct response which can be used to upload a file into the **S3** bucket
 - **4** - Frontend application is integrated with **importProductsFile** lambda
 - **5** - The **importFileParser** lambda function is implemented and **serverless.yml** contains configuration for the lambda
 
@@ -57,4 +61,4 @@ Reviewers should verify the lambda functions by invoking them through provided U
 
 - **+1** - **async/await** is used in lambda functions
 - **+1** - **importProductsFile** lambda is covered by **unit** tests (**aws-sdk-mock** can be used to mock S3 methods - https://www.npmjs.com/package/aws-sdk-mock)
-- **+1** - At the end of the **stream** the lambda function should move the catalog from the **uploaded** folder into the **parsed** folder
+- **+1** - At the end of the **stream** the lambda function should move the file from the **uploaded** folder into the **parsed** folder (move the file means that file should be copied into **parsed** folder, and then deleted from **uploaded** folder)
