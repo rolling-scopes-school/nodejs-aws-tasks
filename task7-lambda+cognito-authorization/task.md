@@ -21,7 +21,7 @@ Create **basicAuthorizer** lambda function in authorization service in **serverl
 * {yours_github_account_login} - your GitHub account name. Login for test user should be your GitHub account name (example: vasiapupkin)
 * TEST_PASSWORD - password string. Password for test user must be «TEST_PASSWORD»
  
-**basicAuthorizer** lambda should take **Basic authorization_token**, decode it and check that credentials provided by token exist in the lambda environment variable. This lambda should return 403 HTTP status if access is denied for this user (invalid **authorization_token**) and 401 HTTP status in case of other errors.
+**basicAuthorizer** lambda should take **Basic authorization_token**, decode it and check that credentials provided by token exist in the lambda environment variable. This lambda should return 403 HTTP status if access is denied for this user (invalid **authorization_token**) and 401 HTTP status if Authorization header is not provided.
  
 **NOTE:** do not send credentials to the GitHub. Use **.env** file and **serverless-dotenv-plugin** serverless plugin to add environment variables to the lambda. Add **.env** file to **.gitignore** file.
 
@@ -55,3 +55,19 @@ Provide your reviewers with the link to the repo, client application and URLs to
 ## Additional (optional) tasks
 ---
 * **+1** - Client application should display alerts for the responses in 401 and 403 HTTP statuses. This behavior should be added to the **nodejs-aws-fe-main/src/index.tsx** file
+* **just practice, no evaluation** - Add Login page and protect **getProducts** lambda by the Cognito Authorizer
+  * Create Cognito User Pool using a demo from the lecture. Leave **email** in a list of standard required attributes. Checkbox **Allow users to sign themselves up** should be checked. Also, set **email** as an attribute that you want to verify.
+  * Add **App Client** to the User Pool
+  * In the **App client settings** section select all **Identity Providers**. Fill the **Callback URL(s)** field with your Client Application URL (f.e. http://localhost:3000/). Allow only **Implicit grant** OAuth Flow. Allow all **OAuth Scopes**
+  * Create Domain name
+  * After all of these manipulations, you can open your **login page** by clicking on the **Launch Hosted UI** link in the **App client settings**
+  * Provide this link to your reviewers. The reviewer can just confirm that everything works for him too.
+  * Add Cognito authorizer to the **getProducts** lambda. Use **Authorization** as a **Token Source**
+  * How to make sure that everything works as expected:
+    * Open login page and **Sign up** a new user. Use a real email address to create this user
+    * Verify user using code from the email
+    * After verification and after every login you will be redirected to the Client application. URL should contain **id_token** which can be used to access the **getProducts** lambda
+    * Call **getProducts** lambda using **id_token** as a value for the **Authorization** header
+  * Remove authorization from the **getProducts** after your task will be checked
+
+
