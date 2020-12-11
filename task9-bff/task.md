@@ -47,7 +47,8 @@ Provide your reviewers with the following information:
 - **product-service** service API endpoint URL
 - example of the **create product** API call with all needed information: URL, payload, headers, etc.
 - **CART** service API endpoint URL
-- **bff-service** service URL  
+- **bff-service** service URL
+- example how to call **product-service** and **CART** services via **bff-service** service URL   
 ---
 * **3** - A working and correct **express** application should be in the **bff-service** folder. Reviewer can start this application locally with any valid configuration in the **.env** file and this application should works as described in the task 9.1
 * **5** - The **bff-service** should be deployed with Elastic Beanstalk. The **bff-service** call should be redirected to the appropriate service : **product-service** or **CART**. The response from the **bff-service** should be the same as if **product-service** or **CART** services were called directly.
