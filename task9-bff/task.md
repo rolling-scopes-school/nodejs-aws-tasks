@@ -5,7 +5,8 @@
 ## Prerequisites
 ---
 
-- The task is a continuation of **Homework 8** and should be done in the same repo.
+- The task is a continuation of **Homework 8**
+- The task should be done in the backend repo - the same repo with **product-service** and **import-service** services
 - **product-service** and **CART** services should exist and work in your application
 
 ## TASK 9.1
@@ -16,7 +17,7 @@ Create a folder for the **bff-service** in the same level as for other services 
 **bff-service** workflow example:
 * Call **bff-service** by the URL: **{bff-service-url}**/**{recipient-service-name}**?var1=someValue
   * **{bff-service-url}** - for example, http://localhost:3000
-  * **{recipient-service-name}** - ‘cart’ or ‘product’
+  * **{recipient-service-name}** - ‘cart’ or ‘product’ (you can use any other mapping of your choice)
   * ?var1=someValue - query string
 * Get **recipientURL** from the env variables using **{recipient-service-name}** as a key
 * Get request **method** (GET, POST, etc.)
@@ -25,7 +26,6 @@ Create a folder for the **bff-service** in the same level as for other services 
 
 If **bff-service** cannot find **recipientURL** by the **{recipient-service-name}**, return a 'Cannot process request’ error message with status 502.  
 **bff-service** should return the same status code and error message that the recipient service returns to the **bff-service** in case of any error on the recipient service side.  
-**bff-service** should work only with requests from the **product-service** and **CART** services.
 
 ## TASK 9.2
 ---
@@ -36,13 +36,22 @@ Deploy **bff-service** with Elastic Beanstalk.
 * Use the **--cname** option **{yours_github_account_login}-bff-api-{environment_name}**
 * Use the **--single** option
 
- 
+**bff-service** should work only with requests from the **product-service** and **CART** services.  
+All **product-service** and **CART** services methods should work correctly if requested via **bff-service**
+
 ## Evaluation criteria (each mark includes previous mark criteria)
 ---
 
-Provide your reviewers with the link to the repo, **product** and **CART** services URLs and **bff-service** URL
-* **3** - A working and correct **express** application should be in the **bff-service** folder.
-* **5** - The **bff-service** should be deployed with Elastic Beanstalk. The **bff-service** call should be redirected to the appropriate service. The response from the **bff-service** should be the same as if the recipient service was called directly.
+Provide your reviewers with the following information:
+- link to the repo
+- **product-service** service API endpoint URL
+- example of the **create product** API call with all needed information: URL, payload, headers, etc.
+- **CART** service API endpoint URL
+- **bff-service** service URL
+- example how to call **product-service** and **CART** services via **bff-service** service URL   
+---
+* **3** - A working and correct **express** application should be in the **bff-service** folder. Reviewer can start this application locally with any valid configuration in the **.env** file and this application should works as described in the task 9.1
+* **5** - The **bff-service** should be deployed with Elastic Beanstalk. The **bff-service** call should be redirected to the appropriate service : **product-service** or **CART**. The response from the **bff-service** should be the same as if **product-service** or **CART** services were called directly.
  
 ## Additional (optional) tasks
 ---
