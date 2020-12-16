@@ -18,4 +18,7 @@ Customer can create order and wait for delivery.
 1. Products representation on Home page should be based on product-service API.
 2. Products are still static, but products are hardcoded on BE product-service.
 3. Product images are not randomly generated on client side. Product image, same as another product model information should be stored on BE side RDS.
-4. Products might be created through CSV product file import from client side (in progress)
+4. Products might be created through CSV product file import from client side.
+5. Cart might be created with appropriate product set.
+6. Auth logic should be in place 
+
